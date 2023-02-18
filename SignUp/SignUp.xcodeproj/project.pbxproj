@@ -1,0 +1,607 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF9DB77729A10AFD00AE7649 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DB77629A10AFD00AE7649 /* AppDelegate.swift */; };
+		EF9DB77929A10AFD00AE7649 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DB77829A10AFD00AE7649 /* SceneDelegate.swift */; };
+		EF9DB77B29A10AFD00AE7649 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DB77A29A10AFD00AE7649 /* ViewController.swift */; };
+		EF9DB77E29A10AFD00AE7649 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9DB77C29A10AFD00AE7649 /* Main.storyboard */; };
+		EF9DB78029A10AFF00AE7649 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF9DB77F29A10AFF00AE7649 /* Assets.xcassets */; };
+		EF9DB78329A10AFF00AE7649 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF9DB78129A10AFF00AE7649 /* LaunchScreen.storyboard */; };
+		EF9DB78E29A10AFF00AE7649 /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DB78D29A10AFF00AE7649 /* SignUpTests.swift */; };
+		EF9DB79829A10AFF00AE7649 /* SignUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DB79729A10AFF00AE7649 /* SignUpUITests.swift */; };
+		EF9DB79A29A10AFF00AE7649 /* SignUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF9DB79929A10AFF00AE7649 /* SignUpUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF9DB78A29A10AFF00AE7649 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF9DB76B29A10AFD00AE7649 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF9DB77229A10AFD00AE7649;
+			remoteInfo = SignUp;
+		};
+		EF9DB79429A10AFF00AE7649 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF9DB76B29A10AFD00AE7649 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF9DB77229A10AFD00AE7649;
+			remoteInfo = SignUp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF9DB77329A10AFD00AE7649 /* SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF9DB77629A10AFD00AE7649 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EF9DB77829A10AFD00AE7649 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		EF9DB77A29A10AFD00AE7649 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EF9DB77D29A10AFD00AE7649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF9DB77F29A10AFF00AE7649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF9DB78229A10AFF00AE7649 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF9DB78429A10AFF00AE7649 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF9DB78929A10AFF00AE7649 /* SignUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF9DB78D29A10AFF00AE7649 /* SignUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
+		EF9DB79329A10AFF00AE7649 /* SignUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF9DB79729A10AFF00AE7649 /* SignUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITests.swift; sourceTree = "<group>"; };
+		EF9DB79929A10AFF00AE7649 /* SignUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF9DB77029A10AFD00AE7649 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF9DB78629A10AFF00AE7649 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF9DB79029A10AFF00AE7649 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF9DB76A29A10AFD00AE7649 = {
+			isa = PBXGroup;
+			children = (
+				EF9DB77529A10AFD00AE7649 /* SignUp */,
+				EF9DB78C29A10AFF00AE7649 /* SignUpTests */,
+				EF9DB79629A10AFF00AE7649 /* SignUpUITests */,
+				EF9DB77429A10AFD00AE7649 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF9DB77429A10AFD00AE7649 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF9DB77329A10AFD00AE7649 /* SignUp.app */,
+				EF9DB78929A10AFF00AE7649 /* SignUpTests.xctest */,
+				EF9DB79329A10AFF00AE7649 /* SignUpUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF9DB77529A10AFD00AE7649 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				EF9DB77629A10AFD00AE7649 /* AppDelegate.swift */,
+				EF9DB77829A10AFD00AE7649 /* SceneDelegate.swift */,
+				EF9DB77A29A10AFD00AE7649 /* ViewController.swift */,
+				EF9DB77C29A10AFD00AE7649 /* Main.storyboard */,
+				EF9DB77F29A10AFF00AE7649 /* Assets.xcassets */,
+				EF9DB78129A10AFF00AE7649 /* LaunchScreen.storyboard */,
+				EF9DB78429A10AFF00AE7649 /* Info.plist */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		EF9DB78C29A10AFF00AE7649 /* SignUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF9DB78D29A10AFF00AE7649 /* SignUpTests.swift */,
+			);
+			path = SignUpTests;
+			sourceTree = "<group>";
+		};
+		EF9DB79629A10AFF00AE7649 /* SignUpUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF9DB79729A10AFF00AE7649 /* SignUpUITests.swift */,
+				EF9DB79929A10AFF00AE7649 /* SignUpUITestsLaunchTests.swift */,
+			);
+			path = SignUpUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF9DB77229A10AFD00AE7649 /* SignUp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF9DB79D29A10AFF00AE7649 /* Build configuration list for PBXNativeTarget "SignUp" */;
+			buildPhases = (
+				EF9DB76F29A10AFD00AE7649 /* Sources */,
+				EF9DB77029A10AFD00AE7649 /* Frameworks */,
+				EF9DB77129A10AFD00AE7649 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SignUp;
+			productName = SignUp;
+			productReference = EF9DB77329A10AFD00AE7649 /* SignUp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF9DB78829A10AFF00AE7649 /* SignUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF9DB7A029A10AFF00AE7649 /* Build configuration list for PBXNativeTarget "SignUpTests" */;
+			buildPhases = (
+				EF9DB78529A10AFF00AE7649 /* Sources */,
+				EF9DB78629A10AFF00AE7649 /* Frameworks */,
+				EF9DB78729A10AFF00AE7649 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF9DB78B29A10AFF00AE7649 /* PBXTargetDependency */,
+			);
+			name = SignUpTests;
+			productName = SignUpTests;
+			productReference = EF9DB78929A10AFF00AE7649 /* SignUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF9DB79229A10AFF00AE7649 /* SignUpUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF9DB7A329A10AFF00AE7649 /* Build configuration list for PBXNativeTarget "SignUpUITests" */;
+			buildPhases = (
+				EF9DB78F29A10AFF00AE7649 /* Sources */,
+				EF9DB79029A10AFF00AE7649 /* Frameworks */,
+				EF9DB79129A10AFF00AE7649 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF9DB79529A10AFF00AE7649 /* PBXTargetDependency */,
+			);
+			name = SignUpUITests;
+			productName = SignUpUITests;
+			productReference = EF9DB79329A10AFF00AE7649 /* SignUpUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF9DB76B29A10AFD00AE7649 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					EF9DB77229A10AFD00AE7649 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+					EF9DB78829A10AFF00AE7649 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = EF9DB77229A10AFD00AE7649;
+					};
+					EF9DB79229A10AFF00AE7649 = {
+						CreatedOnToolsVersion = 14.1;
+						TestTargetID = EF9DB77229A10AFD00AE7649;
+					};
+				};
+			};
+			buildConfigurationList = EF9DB76E29A10AFD00AE7649 /* Build configuration list for PBXProject "SignUp" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF9DB76A29A10AFD00AE7649;
+			productRefGroup = EF9DB77429A10AFD00AE7649 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF9DB77229A10AFD00AE7649 /* SignUp */,
+				EF9DB78829A10AFF00AE7649 /* SignUpTests */,
+				EF9DB79229A10AFF00AE7649 /* SignUpUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF9DB77129A10AFD00AE7649 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9DB78329A10AFF00AE7649 /* LaunchScreen.storyboard in Resources */,
+				EF9DB78029A10AFF00AE7649 /* Assets.xcassets in Resources */,
+				EF9DB77E29A10AFD00AE7649 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF9DB78729A10AFF00AE7649 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF9DB79129A10AFF00AE7649 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF9DB76F29A10AFD00AE7649 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9DB77B29A10AFD00AE7649 /* ViewController.swift in Sources */,
+				EF9DB77729A10AFD00AE7649 /* AppDelegate.swift in Sources */,
+				EF9DB77929A10AFD00AE7649 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF9DB78529A10AFF00AE7649 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9DB78E29A10AFF00AE7649 /* SignUpTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF9DB78F29A10AFF00AE7649 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF9DB79A29A10AFF00AE7649 /* SignUpUITestsLaunchTests.swift in Sources */,
+				EF9DB79829A10AFF00AE7649 /* SignUpUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF9DB78B29A10AFF00AE7649 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF9DB77229A10AFD00AE7649 /* SignUp */;
+			targetProxy = EF9DB78A29A10AFF00AE7649 /* PBXContainerItemProxy */;
+		};
+		EF9DB79529A10AFF00AE7649 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF9DB77229A10AFD00AE7649 /* SignUp */;
+			targetProxy = EF9DB79429A10AFF00AE7649 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF9DB77C29A10AFD00AE7649 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF9DB77D29A10AFD00AE7649 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF9DB78129A10AFF00AE7649 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF9DB78229A10AFF00AE7649 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF9DB79B29A10AFF00AE7649 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EF9DB79C29A10AFF00AE7649 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF9DB79E29A10AFF00AE7649 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SignUp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..SignUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF9DB79F29A10AFF00AE7649 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SignUp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..SignUp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EF9DB7A129A10AFF00AE7649 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..SignUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SignUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SignUp";
+			};
+			name = Debug;
+		};
+		EF9DB7A229A10AFF00AE7649 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..SignUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SignUp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SignUp";
+			};
+			name = Release;
+		};
+		EF9DB7A429A10AFF00AE7649 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..SignUpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SignUp;
+			};
+			name = Debug;
+		};
+		EF9DB7A529A10AFF00AE7649 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FL4QTRRKMD;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com..SignUpUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = SignUp;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF9DB76E29A10AFD00AE7649 /* Build configuration list for PBXProject "SignUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF9DB79B29A10AFF00AE7649 /* Debug */,
+				EF9DB79C29A10AFF00AE7649 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF9DB79D29A10AFF00AE7649 /* Build configuration list for PBXNativeTarget "SignUp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF9DB79E29A10AFF00AE7649 /* Debug */,
+				EF9DB79F29A10AFF00AE7649 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF9DB7A029A10AFF00AE7649 /* Build configuration list for PBXNativeTarget "SignUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF9DB7A129A10AFF00AE7649 /* Debug */,
+				EF9DB7A229A10AFF00AE7649 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF9DB7A329A10AFF00AE7649 /* Build configuration list for PBXNativeTarget "SignUpUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF9DB7A429A10AFF00AE7649 /* Debug */,
+				EF9DB7A529A10AFF00AE7649 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF9DB76B29A10AFD00AE7649 /* Project object */;
+}
