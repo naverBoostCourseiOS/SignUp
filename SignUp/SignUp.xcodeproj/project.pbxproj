@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F08DE0429A253DB00D0BEA4 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F08DE0329A253DB00D0BEA4 /* UserInformation.swift */; };
 		8F13C87A29A085AB001C3E56 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F13C87829A085AB001C3E56 /* Main.storyboard */; };
 		8F13C87B29A085AB001C3E56 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F13C87929A085AB001C3E56 /* LaunchScreen.storyboard */; };
 		8F13C87E29A085B3001C3E56 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F13C87C29A085B3001C3E56 /* AppDelegate.swift */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8F08DE0329A253DB00D0BEA4 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
 		8F13C87829A085AB001C3E56 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		8F13C87929A085AB001C3E56 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F13C87C29A085B3001C3E56 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +65,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8F08DE0229A253BB00D0BEA4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8F08DE0329A253DB00D0BEA4 /* UserInformation.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8F13C88029A086EC001C3E56 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8F08DE0229A253BB00D0BEA4 /* Models */,
 				8F13C88229A088CA001C3E56 /* Delegates */,
 				8F13C88129A086FD001C3E56 /* ViewControllers */,
 				8FEFE326299F664F00D645A6 /* Extension */,
@@ -255,6 +266,7 @@
 				8F89F292299E415800E775CD /* LoginViewController.swift in Sources */,
 				8FEFE328299F666D00D645A6 /* UIFont+Extension.swift in Sources */,
 				8F13C88A29A12984001C3E56 /* UIViewController+Extension.swift in Sources */,
+				8F08DE0429A253DB00D0BEA4 /* UserInformation.swift in Sources */,
 				8F13C88629A0AB4C001C3E56 /* UIView+Extension.swift in Sources */,
 				8F13C87F29A085B3001C3E56 /* SceneDelegate.swift in Sources */,
 			);
