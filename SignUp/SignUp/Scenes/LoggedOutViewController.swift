@@ -20,6 +20,7 @@ final class LoggedOutViewController: UIViewController {
     super.viewDidLoad()
     configureUI()
     setupConstraints()
+    setupDelegates()
   }
 }
 
@@ -43,3 +44,22 @@ extension LoggedOutViewController {
   }
 }
 
+extension LoggedOutViewController {
+  private func setupDelegates() {
+    signInViewController.delegate = self
+  }
+}
+
+extension LoggedOutViewController: SignInViewControllerDelegate {
+  func signIn() {
+    
+  }
+  
+  func signUp() {
+    let signUpViewController = SignUpViewController()
+    let navigationController = UINavigationController(rootViewController: signUpViewController)
+    navigationController.navigationBar.isHidden = true
+    navigationController.modalPresentationStyle = .overFullScreen
+    present(navigationController, animated: true)
+  }
+}

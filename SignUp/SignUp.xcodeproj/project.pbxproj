@@ -19,6 +19,9 @@
 		EF8AA58D29A22C1400E41FDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA58B29A22C1400E41FDF /* SceneDelegate.swift */; };
 		EF8AA59129A22D5600E41FDF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA59029A22D5600E41FDF /* SignInViewController.swift */; };
 		EF8AA59529A23BA400E41FDF /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA59429A23BA400E41FDF /* UIStackView+Extension.swift */; };
+		EF8AA59729A241A300E41FDF /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA59629A241A300E41FDF /* UserProfileViewController.swift */; };
+		EF8AA59929A246A900E41FDF /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA59829A246A900E41FDF /* SignUpViewController.swift */; };
+		EF8AA59B29A2612200E41FDF /* ImagePickerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA59A29A2612200E41FDF /* ImagePickerService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +58,9 @@
 		EF8AA58B29A22C1400E41FDF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		EF8AA59029A22D5600E41FDF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		EF8AA59429A23BA400E41FDF /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		EF8AA59629A241A300E41FDF /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		EF8AA59829A246A900E41FDF /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		EF8AA59A29A2612200E41FDF /* ImagePickerService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +168,9 @@
 			children = (
 				EF8AA55029A22BAF00E41FDF /* LoggedOutViewController.swift */,
 				EF8AA59029A22D5600E41FDF /* SignInViewController.swift */,
+				EF8AA59829A246A900E41FDF /* SignUpViewController.swift */,
+				EF8AA59629A241A300E41FDF /* UserProfileViewController.swift */,
+				EF8AA59A29A2612200E41FDF /* ImagePickerService.swift */,
 				EF8AA55229A22BAF00E41FDF /* Main.storyboard */,
 				EF8AA55729A22BB000E41FDF /* LaunchScreen.storyboard */,
 			);
@@ -307,7 +316,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF8AA59B29A2612200E41FDF /* ImagePickerService.swift in Sources */,
 				EF8AA55129A22BAF00E41FDF /* LoggedOutViewController.swift in Sources */,
+				EF8AA59729A241A300E41FDF /* UserProfileViewController.swift in Sources */,
+				EF8AA59929A246A900E41FDF /* SignUpViewController.swift in Sources */,
 				EF8AA58529A22BD900E41FDF /* UIView+Extension.swift in Sources */,
 				EF8AA58C29A22C1400E41FDF /* AppDelegate.swift in Sources */,
 				EF8AA59129A22D5600E41FDF /* SignInViewController.swift in Sources */,

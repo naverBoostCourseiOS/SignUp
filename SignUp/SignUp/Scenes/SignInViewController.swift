@@ -38,6 +38,7 @@ final class SignInViewController: UIViewController {
   }()
   private let passwordTextField :UITextField = {
     let textField: UITextField = UITextField()
+    textField.isSecureTextEntry = true
     textField.placeholder = "Password"
     textField.textColor = .black
     textField.layer.cornerRadius = 5
@@ -78,7 +79,7 @@ final class SignInViewController: UIViewController {
       for: .normal
     )
     button.setTitleColor(
-      .blue,
+      .red,
       for: .normal
     )
     button.addTarget(
