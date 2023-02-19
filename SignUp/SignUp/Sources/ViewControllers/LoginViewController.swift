@@ -9,16 +9,22 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
+    // MARK: - Properties
     var textFieldStackView: UIStackView!
     var buttonStackView: UIStackView!
     
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
     }
+}
+
+extension LoginViewController {
     
+    // MARK: - Methods
     func setupViews() {
-        let imageView = makeImageView()
+        let imageView = makeImageView(name: "myProfile")
         let idTextField = makeTextField(withPlaceholder: "ID", isSecureTextEntry: false)
         let pwTextField = makeTextField(withPlaceholder: "Password", isSecureTextEntry: true)
         let signInBtn = makeButton(withTitle: "Sign In", titleColor: .systemBlue)
@@ -50,37 +56,15 @@ class LoginViewController: UIViewController {
             buttonStackView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             buttonStackView.topAnchor.constraint(equalTo: textFieldStackView.bottomAnchor, constant: 40)
         ])
+        
+        signUpBtn.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
     }
     
-    private func makeImageView() -> UIImageView {
-        let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit
-        imageView.image = UIImage(named: "myProfile")
-        return imageView
-    }
-    
-    private func makeTextField(withPlaceholder placeholder: String, isSecureTextEntry: Bool) -> UITextField {
-        let textField = UITextField()
-        textField.font = UIFont.Pretendard(type: .Medium, size: 20)
-        textField.placeholder = placeholder
-        textField.borderStyle = .roundedRect
-        textField.isSecureTextEntry = isSecureTextEntry
-        return textField
-    }
-    
-    private func makeButton(withTitle title: String, titleColor: UIColor) -> UIButton {
-        let button = UIButton()
-        button.titleLabel?.font = UIFont.Pretendard(type: .Medium, size: 20)
-        button.setTitle(title, for: .normal)
-        button.setTitleColor(titleColor, for: .normal)
-        return button
-    }
-    
-    private func makeStackView(arrangedSubviews: [UIView], axis: NSLayoutConstraint.Axis, spacing: CGFloat) -> UIStackView {
-        let stackView = UIStackView(arrangedSubviews: arrangedSubviews)
-        stackView.axis = axis
-        stackView.distribution = .fillEqually
-        stackView.spacing = spacing
-        return stackView
+    // MARK: @objc
+    @objc func signUpButtonTapped() {
+        let signUpVC = SignUpViewController()
+        signUpVC.modalPresentationStyle = .fullScreen
+        signUpVC.modalTransitionStyle = .coverVertical
+        present(signUpVC, animated: true)
     }
 }
