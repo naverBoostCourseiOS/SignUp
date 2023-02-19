@@ -174,6 +174,11 @@ extension SignUpViewController {
             // TODO: 다음 화면으로 넘어가기
             UserInformation.shared.saveBasicInfo(id: idTextField.text, pw: pwTextField.text, introduction: textView.text)
             
+            let additionalInfoVC = AdditionalInfoViewController()
+            additionalInfoVC.modalPresentationStyle = .fullScreen
+            additionalInfoVC.modalTransitionStyle = .coverVertical
+            present(additionalInfoVC, animated: true)
+            
         } else {
             let alert = UIAlertController(title: nil, message: "아직 입력하지 않은 항목이 있습니다.", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "OK", style: .default)

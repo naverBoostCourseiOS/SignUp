@@ -14,6 +14,13 @@ extension UIViewController {
         return imageView
     }
     
+    func makeTextLabel(text: String, size: CGFloat, type: UIFont.PretendardType) -> UILabel {
+        let label = UILabel()
+        label.text = text
+        label.font = UIFont.Pretendard(type: type, size: size)
+        return label
+    }
+    
     func makeTextField(withPlaceholder placeholder: String, isSecureTextEntry: Bool) -> UITextField {
         let textField = UITextField()
         textField.font = UIFont.Pretendard(type: .Medium, size: 20)
