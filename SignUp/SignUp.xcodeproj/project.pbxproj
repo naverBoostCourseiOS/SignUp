@@ -7,13 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF2A9FBA29A392A200DD8048 /* UserInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2A9FB929A392A100DD8048 /* UserInformation.swift */; };
+		EF2A9FBD29A397A700DD8048 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2A9FBC29A397A700DD8048 /* User.swift */; };
+		EF2A9FBF29A3981100DD8048 /* UserInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2A9FBE29A3981100DD8048 /* UserInformationTests.swift */; };
+		EF2A9FC429A39A0D00DD8048 /* SignUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2A9FC229A39A0D00DD8048 /* SignUpUITests.swift */; };
+		EF2A9FC529A39A0D00DD8048 /* SignUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2A9FC329A39A0D00DD8048 /* SignUpUITestsLaunchTests.swift */; };
 		EF8AA55129A22BAF00E41FDF /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA55029A22BAF00E41FDF /* LoggedOutViewController.swift */; };
 		EF8AA55429A22BAF00E41FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8AA55229A22BAF00E41FDF /* Main.storyboard */; };
 		EF8AA55629A22BB000E41FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8AA55529A22BB000E41FDF /* Assets.xcassets */; };
 		EF8AA55929A22BB000E41FDF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8AA55729A22BB000E41FDF /* LaunchScreen.storyboard */; };
 		EF8AA56429A22BB000E41FDF /* SignUpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA56329A22BB000E41FDF /* SignUpTests.swift */; };
-		EF8AA56E29A22BB000E41FDF /* SignUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA56D29A22BB000E41FDF /* SignUpUITests.swift */; };
-		EF8AA57029A22BB000E41FDF /* SignUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA56F29A22BB000E41FDF /* SignUpUITestsLaunchTests.swift */; };
 		EF8AA58529A22BD900E41FDF /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA57F29A22BD800E41FDF /* UIView+Extension.swift */; };
 		EF8AA58C29A22C1400E41FDF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA58A29A22C1400E41FDF /* AppDelegate.swift */; };
 		EF8AA58D29A22C1400E41FDF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA58B29A22C1400E41FDF /* SceneDelegate.swift */; };
@@ -42,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF2A9FB929A392A100DD8048 /* UserInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformation.swift; sourceTree = "<group>"; };
+		EF2A9FBC29A397A700DD8048 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		EF2A9FBE29A3981100DD8048 /* UserInformationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationTests.swift; sourceTree = "<group>"; };
+		EF2A9FC229A39A0D00DD8048 /* SignUpUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpUITests.swift; sourceTree = "<group>"; };
+		EF2A9FC329A39A0D00DD8048 /* SignUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		EF2A9FC629A39A5700DD8048 /* SignUpUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SignUpUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		EF8AA54929A22BAF00E41FDF /* SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8AA55029A22BAF00E41FDF /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
 		EF8AA55329A22BAF00E41FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -51,8 +60,6 @@
 		EF8AA55F29A22BB000E41FDF /* SignUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8AA56329A22BB000E41FDF /* SignUpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpTests.swift; sourceTree = "<group>"; };
 		EF8AA56929A22BB000E41FDF /* SignUpUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SignUpUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EF8AA56D29A22BB000E41FDF /* SignUpUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITests.swift; sourceTree = "<group>"; };
-		EF8AA56F29A22BB000E41FDF /* SignUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EF8AA57F29A22BD800E41FDF /* UIView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EF8AA58A29A22C1400E41FDF /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EF8AA58B29A22C1400E41FDF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,12 +95,38 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF2A9FB829A3929A00DD8048 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A9FBC29A397A700DD8048 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EF2A9FBB29A3979B00DD8048 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A9FB929A392A100DD8048 /* UserInformation.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
+		EF2A9FC029A399D300DD8048 /* SignUpUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A9FC229A39A0D00DD8048 /* SignUpUITests.swift */,
+				EF2A9FC329A39A0D00DD8048 /* SignUpUITestsLaunchTests.swift */,
+				EF2A9FC629A39A5700DD8048 /* SignUpUITests-Bridging-Header.h */,
+			);
+			path = SignUpUITests;
+			sourceTree = "<group>";
+		};
 		EF8AA54029A22BAF00E41FDF = {
 			isa = PBXGroup;
 			children = (
 				EF8AA54B29A22BAF00E41FDF /* SignUp */,
 				EF8AA56229A22BB000E41FDF /* SignUpTests */,
-				EF8AA56C29A22BB000E41FDF /* SignUpUITests */,
+				EF2A9FC029A399D300DD8048 /* SignUpUITests */,
 				EF8AA54A29A22BAF00E41FDF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,6 +144,8 @@
 		EF8AA54B29A22BAF00E41FDF /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				EF2A9FBB29A3979B00DD8048 /* Singletons */,
+				EF2A9FB829A3929A00DD8048 /* Model */,
 				EF8AA58F29A22CC600E41FDF /* Resources */,
 				EF8AA58E29A22CB300E41FDF /* Scenes */,
 				EF8AA58929A22C1400E41FDF /* AppDelegate */,
@@ -124,17 +159,9 @@
 			isa = PBXGroup;
 			children = (
 				EF8AA56329A22BB000E41FDF /* SignUpTests.swift */,
+				EF2A9FBE29A3981100DD8048 /* UserInformationTests.swift */,
 			);
 			path = SignUpTests;
-			sourceTree = "<group>";
-		};
-		EF8AA56C29A22BB000E41FDF /* SignUpUITests */ = {
-			isa = PBXGroup;
-			children = (
-				EF8AA56D29A22BB000E41FDF /* SignUpUITests.swift */,
-				EF8AA56F29A22BB000E41FDF /* SignUpUITestsLaunchTests.swift */,
-			);
-			path = SignUpUITests;
 			sourceTree = "<group>";
 		};
 		EF8AA57D29A22BD800E41FDF /* Utility */ = {
@@ -260,6 +287,7 @@
 					};
 					EF8AA56829A22BB000E41FDF = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 						TestTargetID = EF8AA54829A22BAF00E41FDF;
 					};
 				};
@@ -324,7 +352,9 @@
 				EF8AA58C29A22C1400E41FDF /* AppDelegate.swift in Sources */,
 				EF8AA59129A22D5600E41FDF /* SignInViewController.swift in Sources */,
 				EF8AA58D29A22C1400E41FDF /* SceneDelegate.swift in Sources */,
+				EF2A9FBA29A392A200DD8048 /* UserInformation.swift in Sources */,
 				EF8AA59529A23BA400E41FDF /* UIStackView+Extension.swift in Sources */,
+				EF2A9FBD29A397A700DD8048 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -333,6 +363,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF8AA56429A22BB000E41FDF /* SignUpTests.swift in Sources */,
+				EF2A9FBF29A3981100DD8048 /* UserInformationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,8 +371,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EF8AA57029A22BB000E41FDF /* SignUpUITestsLaunchTests.swift in Sources */,
-				EF8AA56E29A22BB000E41FDF /* SignUpUITests.swift in Sources */,
+				EF2A9FC529A39A0D00DD8048 /* SignUpUITestsLaunchTests.swift in Sources */,
+				EF2A9FC429A39A0D00DD8048 /* SignUpUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -594,14 +625,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P4D7F4WWXG;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.naverboostcourse.SignUpUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "SignUpUITests/SignUpUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SignUp;
@@ -612,14 +651,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = P4D7F4WWXG;
 				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = kr.co.naverboostcourse.SignUpUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "SignUpUITests/SignUpUITests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = SignUp;
