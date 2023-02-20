@@ -65,7 +65,7 @@ extension AdditionalInfoViewController {
         }
 
         NSLayoutConstraint.activate([
-            phoneNumberLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 40),
+            phoneNumberLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 80),
             phoneNumberLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
             phoneNumberLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
             phoneNumberLabel.heightAnchor.constraint(equalToConstant: 40),
