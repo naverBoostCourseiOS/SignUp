@@ -16,6 +16,7 @@
 		8F13C88629A0AB4C001C3E56 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F13C88529A0AB4C001C3E56 /* UIView+Extension.swift */; };
 		8F13C88829A11F2E001C3E56 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F13C88729A11F2E001C3E56 /* SignUpViewController.swift */; };
 		8F13C88A29A12984001C3E56 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F13C88929A12984001C3E56 /* UIViewController+Extension.swift */; };
+		8F49B46A29A30D5700478409 /* InputError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F49B46929A30D5700478409 /* InputError.swift */; };
 		8F89F292299E415800E775CD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F89F291299E415800E775CD /* LoginViewController.swift */; };
 		8F89F297299E415B00E775CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F89F296299E415B00E775CD /* Assets.xcassets */; };
 		8FEFE328299F666D00D645A6 /* UIFont+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FEFE327299F666D00D645A6 /* UIFont+Extension.swift */; };
@@ -40,6 +41,7 @@
 		8F13C88529A0AB4C001C3E56 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		8F13C88729A11F2E001C3E56 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		8F13C88929A12984001C3E56 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		8F49B46929A30D5700478409 /* InputError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputError.swift; sourceTree = "<group>"; };
 		8F89F28A299E415800E775CD /* SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F89F291299E415800E775CD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8F89F296299E415B00E775CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 		8F13C88029A086EC001C3E56 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8F49B46829A30D2F00478409 /* Constants */,
 				8F08DE0229A253BB00D0BEA4 /* Models */,
 				8F13C88229A088CA001C3E56 /* Delegates */,
 				8F13C88129A086FD001C3E56 /* ViewControllers */,
@@ -121,6 +124,14 @@
 				8F89F296299E415B00E775CD /* Assets.xcassets */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8F49B46829A30D2F00478409 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8F49B46929A30D5700478409 /* InputError.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 		8F89F281299E415800E775CD = {
@@ -267,6 +278,7 @@
 				8F13C88829A11F2E001C3E56 /* SignUpViewController.swift in Sources */,
 				8F13C87E29A085B3001C3E56 /* AppDelegate.swift in Sources */,
 				8F89F292299E415800E775CD /* LoginViewController.swift in Sources */,
+				8F49B46A29A30D5700478409 /* InputError.swift in Sources */,
 				8FEFE328299F666D00D645A6 /* UIFont+Extension.swift in Sources */,
 				8F13C88A29A12984001C3E56 /* UIViewController+Extension.swift in Sources */,
 				8F08DE0429A253DB00D0BEA4 /* UserInformation.swift in Sources */,
