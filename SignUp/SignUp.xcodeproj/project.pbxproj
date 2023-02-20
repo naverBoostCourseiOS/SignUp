@@ -121,6 +121,22 @@
 			path = SignUpUITests;
 			sourceTree = "<group>";
 		};
+		EF2A9FC929A3A12800DD8048 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EF8AA59A29A2612200E41FDF /* ImagePickerService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EF2A9FCD29A3A1E300DD8048 /* Singletons */ = {
+			isa = PBXGroup;
+			children = (
+				EF2A9FBE29A3981100DD8048 /* UserInformationTests.swift */,
+			);
+			path = Singletons;
+			sourceTree = "<group>";
+		};
 		EF8AA54029A22BAF00E41FDF = {
 			isa = PBXGroup;
 			children = (
@@ -144,6 +160,7 @@
 		EF8AA54B29A22BAF00E41FDF /* SignUp */ = {
 			isa = PBXGroup;
 			children = (
+				EF2A9FC929A3A12800DD8048 /* Services */,
 				EF2A9FBB29A3979B00DD8048 /* Singletons */,
 				EF2A9FB829A3929A00DD8048 /* Model */,
 				EF8AA58F29A22CC600E41FDF /* Resources */,
@@ -158,8 +175,8 @@
 		EF8AA56229A22BB000E41FDF /* SignUpTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF2A9FCD29A3A1E300DD8048 /* Singletons */,
 				EF8AA56329A22BB000E41FDF /* SignUpTests.swift */,
-				EF2A9FBE29A3981100DD8048 /* UserInformationTests.swift */,
 			);
 			path = SignUpTests;
 			sourceTree = "<group>";
@@ -197,7 +214,6 @@
 				EF8AA59029A22D5600E41FDF /* SignInViewController.swift */,
 				EF8AA59829A246A900E41FDF /* SignUpViewController.swift */,
 				EF8AA59629A241A300E41FDF /* UserProfileViewController.swift */,
-				EF8AA59A29A2612200E41FDF /* ImagePickerService.swift */,
 				EF8AA55229A22BAF00E41FDF /* Main.storyboard */,
 				EF8AA55729A22BB000E41FDF /* LaunchScreen.storyboard */,
 			);
