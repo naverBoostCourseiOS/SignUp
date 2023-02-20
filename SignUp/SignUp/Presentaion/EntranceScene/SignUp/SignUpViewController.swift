@@ -11,6 +11,14 @@ class SignUpViewController: UIViewController {
 
     static let identifier: String = String(describing: SignUpViewController.self)
     
+    lazy var profilePicker: UIImagePickerController = {
+        let picker = UIImagePickerController()
+        picker.delegate = self
+        picker.sourceType = .photoLibrary
+        
+        return picker
+    }()
+    
     let placeholderImage: UIImage? = UIImage(systemName: "text.below.photo.fill")?.withRenderingMode(.alwaysTemplate)
     
     var logoImageView: UIImageView = {
@@ -18,6 +26,7 @@ class SignUpViewController: UIViewController {
         imageView.image = UIImage(systemName: "text.below.photo.fill")?.withRenderingMode(.alwaysTemplate)
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
+        imageView.isUserInteractionEnabled = true
         
         return imageView
     }()
@@ -82,6 +91,8 @@ class SignUpViewController: UIViewController {
         pwCheckTextfield.delegate = self
         introduceTextView.delegate = self
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(callPicker))
+        logoImageView.addGestureRecognizer(tap)
         cancelButton.addTarget(self, action: #selector(touchCancelButton), for: .touchUpInside)
         nextButton.addTarget(self, action: #selector(touchNextButton), for: .touchUpInside)
         nextButton.isEnabled = false
@@ -143,6 +154,13 @@ class SignUpViewController: UIViewController {
     }
     
     @objc
+    private func callPicker() {
+        print(#function)
+        
+        present(profilePicker, animated: true, completion: nil)
+    }
+    
+    @objc
     func touchCancelButton() {
         navigationController?.popViewController(animated: true)
     }
@@ -177,20 +195,28 @@ class SignUpViewController: UIViewController {
     }
 }
 
+// MARK: UIPickerViewDelegate Method
+extension SignUpViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if picker.sourceType == .photoLibrary {
+            DispatchQueue.main.async {
+                self.logoImageView.image = info[.originalImage] as? UIImage
+            }
+            dismiss(animated: true)
+        }
+    }
+}
+
 // MARK: UITextFieldDelegate Method
 extension SignUpViewController: UITextFieldDelegate {
-    
     func textFieldDidEndEditing(_ textField: UITextField) {
-        print(#function)
         validNextStep()
     }
 }
 
 // MARK: UITextViewDelegate Method
 extension SignUpViewController: UITextViewDelegate {
-    
-    func textViewDidEndEditing(_ textView: UITextView) {
-        print(#function)
+    func textViewDidChange(_ textView: UITextView) {
         validNextStep()
     }
 }
