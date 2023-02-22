@@ -64,19 +64,22 @@ class SignUpViewController: UIViewController {
         return textView
     }()
     
-    var cancelButton: UIButton = {
+    lazy var cancelButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.setTitle("취소", for: .normal)
         button.setTitleColor(.red, for: .normal)
+        button.addTarget(self, action: #selector(touchCancelButton), for: .touchUpInside)
         
         return button
     }()
     
-    var nextButton: UIButton = {
+    lazy var nextButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.setTitle("다음", for: .normal)
         button.setTitleColor(.tintColor, for: .normal)
         button.setTitleColor(.gray, for: .disabled)
+        button.addTarget(self, action: #selector(touchNextButton), for: .touchUpInside)
+        button.isEnabled = false
         
         return button
     }()
@@ -93,9 +96,6 @@ class SignUpViewController: UIViewController {
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(callPicker))
         logoImageView.addGestureRecognizer(tap)
-        cancelButton.addTarget(self, action: #selector(touchCancelButton), for: .touchUpInside)
-        nextButton.addTarget(self, action: #selector(touchNextButton), for: .touchUpInside)
-        nextButton.isEnabled = false
     }
 
     private func initLayout() {
@@ -167,8 +167,9 @@ class SignUpViewController: UIViewController {
     
     @objc
     func touchNextButton() {
-        print(#function)
+        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: SignUpDetailViewController.identifier) as? SignUpDetailViewController else { return }
         
+        navigationController?.pushViewController(vc, animated: true)
     }
     
     private func validNextStep() {
