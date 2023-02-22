@@ -8,8 +8,10 @@
 import UIKit
 
 protocol UserProfileViewControllerDelegate: NSObject {
-  func cancel()
-  func next()
+  func IDTextFieldEditingDidChanged(_ text: String?)
+  func passwordTextFieldEditingDidChanged(_ text: String?)
+  func passwordConfirmTextFieldEditingDidChanged(_ text: String?)
+  func profileDescriptionTextViewEditingDidChanged(_ text: String?)
 }
 
 final class UserProfileViewController: UIViewController {
@@ -17,11 +19,11 @@ final class UserProfileViewController: UIViewController {
   struct Dependency {
     let imagePickerService: ImagePickerServicable
   }
-
+  
   // MARK: - Properties
   weak var delegate: UserProfileViewControllerDelegate?
   private let dependency: Dependency
-    
+  
   // MARK: - UI Properties
   private let userAuthenticationStackView: UIStackView = {
     let stackView: UIStackView = UIStackView()
@@ -31,7 +33,7 @@ final class UserProfileViewController: UIViewController {
     stackView.translatesAutoresizingMaskIntoConstraints = false
     return stackView
   }()
-  private let IDTextField: UITextField = {
+  private lazy var IDTextField: UITextField = {
     let textField: UITextField = UITextField()
     textField.placeholder = "ID"
     textField.textColor = .black
@@ -40,9 +42,15 @@ final class UserProfileViewController: UIViewController {
     textField.layer.borderWidth = 1
     textField.layer.borderColor = UIColor.lightGray.cgColor
     textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.addTarget(
+      self,
+      action: #selector(
+        IDTextFieldEditingDidChange(_:)),
+      for: .editingChanged
+    )
     return textField
   }()
-  private let passwordTextField :UITextField = {
+  private lazy var passwordTextField :UITextField = {
     let textField: UITextField = UITextField()
     textField.placeholder = "Password"
     textField.isSecureTextEntry = true
@@ -52,9 +60,15 @@ final class UserProfileViewController: UIViewController {
     textField.layer.borderWidth = 1
     textField.layer.borderColor = UIColor.lightGray.cgColor
     textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.addTarget(
+      self,
+      action: #selector(
+        passwordTextFieldEditingDidChange(_:)),
+      for: .editingChanged
+    )
     return textField
   }()
-  private let passwordConfirmTextField :UITextField = {
+  private lazy var passwordConfirmTextField :UITextField = {
     let textField: UITextField = UITextField()
     textField.placeholder = "Password Confirmed"
     textField.isSecureTextEntry = true
@@ -64,6 +78,12 @@ final class UserProfileViewController: UIViewController {
     textField.layer.borderWidth = 1
     textField.layer.borderColor = UIColor.lightGray.cgColor
     textField.translatesAutoresizingMaskIntoConstraints = false
+    textField.addTarget(
+      self,
+      action: #selector(
+        passwordConfirmTextFieldEditingDidChange(_:)),
+      for: .editingChanged
+    )
     return textField
   }()
   private let userProfileStackView: UIStackView = {
@@ -85,56 +105,12 @@ final class UserProfileViewController: UIViewController {
     )
     return button
   }()
-  private let profileDescriptionTextView: UITextView = {
+  private lazy var profileDescriptionTextView: UITextView = {
     let textView: UITextView = UITextView()
     textView.backgroundColor = .yellow
     textView.textColor = .black
     textView.translatesAutoresizingMaskIntoConstraints = false
     return textView
-  }()
-  private let buttonStackView: UIStackView = {
-    let stackView: UIStackView = UIStackView()
-    stackView.axis = .horizontal
-    stackView.distribution = .fillEqually
-    stackView.spacing = 0
-    stackView.translatesAutoresizingMaskIntoConstraints = false
-    return stackView
-  }()
-  private lazy var cancelButton: UIButton = {
-    let button = UIButton()
-    button.setTitle(
-      "취소",
-      for: .normal
-    )
-    button.setTitleColor(
-      .red,
-      for: .normal
-    )
-    button.addTarget(
-      self,
-      action: #selector(didTapCancelButton(_:)),
-      for: .touchUpInside
-    )
-    button.translatesAutoresizingMaskIntoConstraints = false
-    return button
-  }()
-  private lazy var nextButton: UIButton = {
-    let button = UIButton()
-    button.setTitle(
-      "다음",
-      for: .normal
-    )
-    button.setTitleColor(
-      .blue,
-      for: .normal
-    )
-    button.addTarget(
-      self,
-      action: #selector(didTapOKButton(_:)),
-      for: .touchUpInside
-    )
-    button.translatesAutoresizingMaskIntoConstraints = false
-    return button
   }()
   
   init(_ dependency: Dependency) {
@@ -151,6 +127,7 @@ final class UserProfileViewController: UIViewController {
     configureUI()
     setupConstraints()
     dependency.imagePickerService.setDelegate(self)
+    profileDescriptionTextView.delegate = self
   }
 }
 
@@ -158,8 +135,7 @@ extension UserProfileViewController {
   private func configureUI() {
     view.addSubviews(
       userProfileStackView,
-      profileDescriptionTextView,
-      buttonStackView
+      profileDescriptionTextView
     )
     
     userAuthenticationStackView.addArrangeSubViews(
@@ -171,11 +147,6 @@ extension UserProfileViewController {
     userProfileStackView.addArrangeSubViews(
       profileImageButton,
       userAuthenticationStackView
-    )
-    
-    buttonStackView.addArrangeSubViews(
-      cancelButton,
-      nextButton
     )
   }
   
@@ -191,15 +162,7 @@ extension UserProfileViewController {
       profileDescriptionTextView.topAnchor.constraint(equalTo: userProfileStackView.bottomAnchor, constant: 10),
       profileDescriptionTextView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
       profileDescriptionTextView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20),
-      profileDescriptionTextView.bottomAnchor.constraint(equalTo: buttonStackView.topAnchor, constant: -20)
-    ]
-      .forEach { $0.isActive = true }
-    
-    [
-      buttonStackView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor),
-      buttonStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor),
-      buttonStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-      buttonStackView.heightAnchor.constraint(equalToConstant: 44)
+      profileDescriptionTextView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -20)
     ]
       .forEach { $0.isActive = true }
     
@@ -222,17 +185,32 @@ extension UserProfileViewController {
   @objc private func didTapProfileImageButton(_ sender: UIButton) {
     dependency.imagePickerService.show(self)
   }
-  @objc private func didTapCancelButton(_ sender: UIButton) {
-    delegate?.cancel()
-  }
-  
-  @objc private func didTapOKButton(_ sender: UIButton) {
-    delegate?.next()
-  }
 }
 
 extension UserProfileViewController: ImagePickerServiceDelegate {
   func didFinishPicking(_ image: UIImage?) {
     profileImageButton.setImage(image, for: .normal)
+  }
+}
+
+// MARK: - Selectors
+extension UserProfileViewController {
+  @objc private func IDTextFieldEditingDidChange(_ textField: UITextField) {
+    delegate?.IDTextFieldEditingDidChanged(textField.text)
+  }
+  
+  @objc private func passwordTextFieldEditingDidChange(_ textField: UITextField) {
+    delegate?.passwordTextFieldEditingDidChanged(textField.text)
+  }
+  
+  @objc private func passwordConfirmTextFieldEditingDidChange(_ textField: UITextField) {
+    delegate?.passwordConfirmTextFieldEditingDidChanged(textField.text)
+  }
+}
+
+// MARK: - UITextView Delegate
+extension UserProfileViewController: UITextViewDelegate {
+  func textViewDidChange(_ textView: UITextView) {
+    delegate?.profileDescriptionTextViewEditingDidChanged(textView.text)
   }
 }

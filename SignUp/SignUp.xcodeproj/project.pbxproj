@@ -12,6 +12,13 @@
 		EF2A9FBF29A3981100DD8048 /* UserInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2A9FBE29A3981100DD8048 /* UserInformationTests.swift */; };
 		EF2A9FC429A39A0D00DD8048 /* SignUpUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2A9FC229A39A0D00DD8048 /* SignUpUITests.swift */; };
 		EF2A9FC529A39A0D00DD8048 /* SignUpUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF2A9FC329A39A0D00DD8048 /* SignUpUITestsLaunchTests.swift */; };
+		EF36C8DE29A59DDC0066FF45 /* RegexCalculateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36C8DD29A59DDC0066FF45 /* RegexCalculateService.swift */; };
+		EF36C8E329A59EFE0066FF45 /* RegexCalculateServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36C8E229A59EFE0066FF45 /* RegexCalculateServiceTests.swift */; };
+		EF36C8E529A5A0F30066FF45 /* IDRegexCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36C8E429A5A0F30066FF45 /* IDRegexCalculator.swift */; };
+		EF36C8E729A5A3EC0066FF45 /* PasswordRegexCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36C8E629A5A3EC0066FF45 /* PasswordRegexCalculator.swift */; };
+		EF36C8EA29A5A6880066FF45 /* RegexCalculateServiceMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36C8E929A5A6880066FF45 /* RegexCalculateServiceMock.swift */; };
+		EF36C8EE29A5B2030066FF45 /* IDRegexCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36C8ED29A5B2030066FF45 /* IDRegexCalculatorTests.swift */; };
+		EF36C8F029A5B36E0066FF45 /* PasswordRegexCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF36C8EF29A5B36E0066FF45 /* PasswordRegexCalculatorTests.swift */; };
 		EF8AA55129A22BAF00E41FDF /* LoggedOutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF8AA55029A22BAF00E41FDF /* LoggedOutViewController.swift */; };
 		EF8AA55429A22BAF00E41FDF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF8AA55229A22BAF00E41FDF /* Main.storyboard */; };
 		EF8AA55629A22BB000E41FDF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF8AA55529A22BB000E41FDF /* Assets.xcassets */; };
@@ -51,6 +58,13 @@
 		EF2A9FC229A39A0D00DD8048 /* SignUpUITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpUITests.swift; sourceTree = "<group>"; };
 		EF2A9FC329A39A0D00DD8048 /* SignUpUITestsLaunchTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		EF2A9FC629A39A5700DD8048 /* SignUpUITests-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SignUpUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		EF36C8DD29A59DDC0066FF45 /* RegexCalculateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexCalculateService.swift; sourceTree = "<group>"; };
+		EF36C8E229A59EFE0066FF45 /* RegexCalculateServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexCalculateServiceTests.swift; sourceTree = "<group>"; };
+		EF36C8E429A5A0F30066FF45 /* IDRegexCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDRegexCalculator.swift; sourceTree = "<group>"; };
+		EF36C8E629A5A3EC0066FF45 /* PasswordRegexCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRegexCalculator.swift; sourceTree = "<group>"; };
+		EF36C8E929A5A6880066FF45 /* RegexCalculateServiceMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegexCalculateServiceMock.swift; sourceTree = "<group>"; };
+		EF36C8ED29A5B2030066FF45 /* IDRegexCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IDRegexCalculatorTests.swift; sourceTree = "<group>"; };
+		EF36C8EF29A5B36E0066FF45 /* PasswordRegexCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordRegexCalculatorTests.swift; sourceTree = "<group>"; };
 		EF8AA54929A22BAF00E41FDF /* SignUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SignUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8AA55029A22BAF00E41FDF /* LoggedOutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoggedOutViewController.swift; sourceTree = "<group>"; };
 		EF8AA55329A22BAF00E41FDF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -125,6 +139,9 @@
 			isa = PBXGroup;
 			children = (
 				EF8AA59A29A2612200E41FDF /* ImagePickerService.swift */,
+				EF36C8DD29A59DDC0066FF45 /* RegexCalculateService.swift */,
+				EF36C8E429A5A0F30066FF45 /* IDRegexCalculator.swift */,
+				EF36C8E629A5A3EC0066FF45 /* PasswordRegexCalculator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -135,6 +152,25 @@
 				EF2A9FBE29A3981100DD8048 /* UserInformationTests.swift */,
 			);
 			path = Singletons;
+			sourceTree = "<group>";
+		};
+		EF36C8DF29A59EDC0066FF45 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EF36C8E829A5A6790066FF45 /* Mocks */,
+				EF36C8E229A59EFE0066FF45 /* RegexCalculateServiceTests.swift */,
+				EF36C8ED29A5B2030066FF45 /* IDRegexCalculatorTests.swift */,
+				EF36C8EF29A5B36E0066FF45 /* PasswordRegexCalculatorTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EF36C8E829A5A6790066FF45 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				EF36C8E929A5A6880066FF45 /* RegexCalculateServiceMock.swift */,
+			);
+			path = Mocks;
 			sourceTree = "<group>";
 		};
 		EF8AA54029A22BAF00E41FDF = {
@@ -175,6 +211,7 @@
 		EF8AA56229A22BB000E41FDF /* SignUpTests */ = {
 			isa = PBXGroup;
 			children = (
+				EF36C8DF29A59EDC0066FF45 /* Services */,
 				EF2A9FCD29A3A1E300DD8048 /* Singletons */,
 				EF8AA56329A22BB000E41FDF /* SignUpTests.swift */,
 			);
@@ -364,12 +401,15 @@
 				EF8AA55129A22BAF00E41FDF /* LoggedOutViewController.swift in Sources */,
 				EF8AA59729A241A300E41FDF /* UserProfileViewController.swift in Sources */,
 				EF8AA59929A246A900E41FDF /* SignUpViewController.swift in Sources */,
+				EF36C8DE29A59DDC0066FF45 /* RegexCalculateService.swift in Sources */,
 				EF8AA58529A22BD900E41FDF /* UIView+Extension.swift in Sources */,
 				EF8AA58C29A22C1400E41FDF /* AppDelegate.swift in Sources */,
 				EF8AA59129A22D5600E41FDF /* SignInViewController.swift in Sources */,
 				EF8AA58D29A22C1400E41FDF /* SceneDelegate.swift in Sources */,
 				EF2A9FBA29A392A200DD8048 /* UserInformation.swift in Sources */,
 				EF8AA59529A23BA400E41FDF /* UIStackView+Extension.swift in Sources */,
+				EF36C8E529A5A0F30066FF45 /* IDRegexCalculator.swift in Sources */,
+				EF36C8E729A5A3EC0066FF45 /* PasswordRegexCalculator.swift in Sources */,
 				EF2A9FBD29A397A700DD8048 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,7 +418,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF36C8EE29A5B2030066FF45 /* IDRegexCalculatorTests.swift in Sources */,
 				EF8AA56429A22BB000E41FDF /* SignUpTests.swift in Sources */,
+				EF36C8F029A5B36E0066FF45 /* PasswordRegexCalculatorTests.swift in Sources */,
+				EF36C8E329A59EFE0066FF45 /* RegexCalculateServiceTests.swift in Sources */,
+				EF36C8EA29A5A6880066FF45 /* RegexCalculateServiceMock.swift in Sources */,
 				EF2A9FBF29A3981100DD8048 /* UserInformationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

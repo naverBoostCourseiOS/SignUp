@@ -56,7 +56,12 @@ extension LoggedOutViewController: SignInViewControllerDelegate {
   }
   
   func signUp() {
-    let signUpViewController = SignUpViewController()
+    let signUpViewController = SignUpViewController(
+      .init(
+        IDRegexCalculator: IDRegexCalculator(RegexCalculateService(pattern: IDRegexCalculator.regex)),
+        passwordRegexCalculator: PasswordRegexCalculator(RegexCalculateService(pattern: PasswordRegexCalculator.regex))
+      )
+    )
     let navigationController = UINavigationController(rootViewController: signUpViewController)
     navigationController.navigationBar.isHidden = true
     navigationController.modalPresentationStyle = .overFullScreen
