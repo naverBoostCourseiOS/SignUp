@@ -8,6 +8,7 @@
 import UIKit
 
 protocol UserProfileViewControllerDelegate: NSObject {
+  func profileImageDidChanged(_ image: UIImage?)
   func IDTextFieldEditingDidChanged(_ text: String?)
   func passwordTextFieldEditingDidChanged(_ text: String?)
   func passwordConfirmTextFieldEditingDidChanged(_ text: String?)
@@ -190,6 +191,7 @@ extension UserProfileViewController {
 extension UserProfileViewController: ImagePickerServiceDelegate {
   func didFinishPicking(_ image: UIImage?) {
     profileImageButton.setImage(image, for: .normal)
+    delegate?.profileImageDidChanged(image)
   }
 }
 

@@ -62,9 +62,6 @@ extension LoggedOutViewController: SignInViewControllerDelegate {
         passwordRegexCalculator: PasswordRegexCalculator(RegexCalculateService(pattern: PasswordRegexCalculator.regex))
       )
     )
-    let navigationController = UINavigationController(rootViewController: signUpViewController)
-    navigationController.navigationBar.isHidden = true
-    navigationController.modalPresentationStyle = .overFullScreen
-    present(navigationController, animated: true)
+    navigationController?.pushViewController(signUpViewController, animated: true)
   }
 }

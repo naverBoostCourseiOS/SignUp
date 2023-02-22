@@ -14,9 +14,22 @@ final class SignUpViewController: UIViewController {
     let passwordRegexCalculator: PasswordRegexCalculatable
   }
   
+  struct Validation {
+    var profileImage: Bool = false
+    var ID: Bool = false
+    var password: Bool = false
+    var passwordConfirm: Bool = false
+    var introduction: Bool = false
+  }
+  
   // MARK: - Properties
   
   private let dependency: Dependency
+  private var validation = Validation() {
+    didSet {
+      checkAllValidation()
+    }
+  }
   
   // MARK: - UI Properties
   private let userProfileViewController: UserProfileViewController = {
@@ -67,10 +80,11 @@ final class SignUpViewController: UIViewController {
     )
     button.addTarget(
       self,
-      action: #selector(didTapOKButton(_:)),
+      action: #selector(didTapNextButton(_:)),
       for: .touchUpInside
     )
     button.translatesAutoresizingMaskIntoConstraints = false
+    button.isEnabled = false
     return button
   }()
   
@@ -87,12 +101,14 @@ final class SignUpViewController: UIViewController {
     super.viewDidLoad()
     configureUI()
     setupConstraints()
+    setupDelegates()
   }
 }
 
 extension SignUpViewController {
   // MARK: - Configure UI
   private func configureUI() {
+    view.backgroundColor = .white
     addChild(userProfileViewController)
     userProfileViewController.didMove(toParent: self)
     
@@ -132,29 +148,76 @@ extension SignUpViewController {
   private func setupDelegates() {
     userProfileViewController.delegate = self
   }
+  
+  private func validateID(_ ID: String?) -> Bool {
+    guard let ID = ID else { return false }
+    do {
+      return try dependency.IDRegexCalculator.calculate(ID)
+    } catch {
+      // TODO: - Error 처리
+      return false
+    }
+  }
+  
+  private func validatePassword(_ password: String?) -> Bool {
+    guard let password = password else { return false }
+    do {
+      return try dependency.passwordRegexCalculator.calculate(password)
+    } catch {
+      // TODO: - Error 처리
+      return false
+    }
+  }
+  
+  private func checkAllValidation() {
+    nextButton.isEnabled = validation.profileImage
+    && validation.ID
+    && validation.password
+    && validation.passwordConfirm
+    && validation.introduction
+  }
 }
 
 // MARK: - Selectors
 extension SignUpViewController {
   @objc private func didTapCancelButton(_ sender: UIButton) {
-    
+    UserInformation.shared.clear()
+    navigationController?.popToRootViewController(animated: true)
   }
   
-  @objc private func didTapOKButton(_ sender: UIButton) {
+  @objc private func didTapNextButton(_ sender: UIButton) {
     
   }
 }
 
 extension SignUpViewController: UserProfileViewControllerDelegate {
+  func profileImageDidChanged(_ image: UIImage?) {
+    guard let profileIamge = image else { validation.profileImage = false; return }
+    validation.profileImage = true
+    UserInformation.shared.setProfileImage(profileIamge)
+  }
+  
   func IDTextFieldEditingDidChanged(_ text: String?) {
+    guard validateID(text) else { validation.ID = false; return }
+    validation.ID = true
+    UserInformation.shared.setID(text ?? "")
   }
   
   func passwordTextFieldEditingDidChanged(_ text: String?) {
+    guard validatePassword(text) else { validation.password = false; return }
+    validation.password = true
+    UserInformation.shared.setPassword(text ?? "")
   }
   
   func passwordConfirmTextFieldEditingDidChanged(_ text: String?) {
+    guard validatePassword(text) else { validation.passwordConfirm = false; return }
+    validation.passwordConfirm = true
   }
   
   func profileDescriptionTextViewEditingDidChanged(_ text: String?) {
+    guard let introduction = text,
+          !introduction.isEmpty else { validation.introduction = false; return }
+    validation.introduction = true
+    UserInformation.shared.setIntroduction(text ?? "")
   }
 }

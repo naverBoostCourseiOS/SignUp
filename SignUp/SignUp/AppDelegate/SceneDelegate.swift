@@ -16,13 +16,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     willConnectTo session: UISceneSession,
     options connectionOptions: UIScene.ConnectionOptions
   ) {
+    
     let viewController = LoggedOutViewController()
+    let navigationController = UINavigationController(rootViewController: viewController)
+    navigationController.navigationBar.isHidden = true
+    navigationController.modalPresentationStyle = .overFullScreen
     
     self.window = makeWindow(scene: scene)
     
     configure(
       window: window,
-      rootViewController: viewController
+      rootViewController: navigationController
     )
   }
 }
