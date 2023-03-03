@@ -21,12 +21,14 @@ class SignUpViewController: UIViewController {
     
     let placeholderImage: UIImage? = UIImage(systemName: "text.below.photo.fill")?.withRenderingMode(.alwaysTemplate)
     
-    var logoImageView: UIImageView = {
+    lazy var logoImageView: UIImageView = {
         let imageView = UIImageView(frame: .zero)
         imageView.image = UIImage(systemName: "text.below.photo.fill")?.withRenderingMode(.alwaysTemplate)
         imageView.tintColor = .gray
         imageView.contentMode = .scaleAspectFit
         imageView.isUserInteractionEnabled = true
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(callPicker))
+        imageView.addGestureRecognizer(tap)
         
         return imageView
     }()
@@ -93,9 +95,6 @@ class SignUpViewController: UIViewController {
         passwordTextfield.delegate = self
         pwCheckTextfield.delegate = self
         introduceTextView.delegate = self
-        
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(callPicker))
-        logoImageView.addGestureRecognizer(tap)
     }
 
     private func initLayout() {

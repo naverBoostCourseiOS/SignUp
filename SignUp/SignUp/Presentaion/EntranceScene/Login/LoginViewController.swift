@@ -33,11 +33,11 @@ class LoginViewController: UIViewController {
         return button
     }()
     
-    var signUpButton: UIButton = {
+    lazy var signUpButton: UIButton = {
         let button = UIButton(frame: .zero)
         button.setTitle("Sign Up", for: .normal)
         button.setTitleColor(.red, for: .normal)
-        
+        button.addTarget(self, action: #selector(touchSignUpButton), for: .touchUpInside)
         return button
     }()
     
@@ -45,7 +45,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         initLayout()
-        signUpButton.addTarget(self, action: #selector(touchSignUpButton), for: .touchUpInside)
     }
 
     private func initLayout() {
