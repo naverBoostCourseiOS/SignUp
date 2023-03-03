@@ -181,13 +181,6 @@ extension UserProfileViewController {
   }
 }
 
-// MARK: - Selectors
-extension UserProfileViewController {
-  @objc private func didTapProfileImageButton(_ sender: UIButton) {
-    dependency.imagePickerService.show(self)
-  }
-}
-
 extension UserProfileViewController: ImagePickerServiceDelegate {
   func didFinishPicking(_ image: UIImage?) {
     profileImageButton.setImage(image, for: .normal)
@@ -197,6 +190,10 @@ extension UserProfileViewController: ImagePickerServiceDelegate {
 
 // MARK: - Selectors
 extension UserProfileViewController {
+  @objc private func didTapProfileImageButton(_ sender: UIButton) {
+    dependency.imagePickerService.show(self)
+  }
+
   @objc private func IDTextFieldEditingDidChange(_ textField: UITextField) {
     delegate?.IDTextFieldEditingDidChanged(textField.text)
   }

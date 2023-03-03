@@ -186,7 +186,14 @@ extension SignUpViewController {
   }
   
   @objc private func didTapNextButton(_ sender: UIButton) {
-    
+    let additionalInformationViewController = AdditionalInformationViewController(
+      .init(
+        phoneRegexCalculator: PhoneRegexCalculator(
+          RegexCalculateService(pattern: PhoneRegexCalculator.regex)
+        )
+      )
+    )
+    navigationController?.pushViewController(additionalInformationViewController, animated: true)
   }
 }
 
